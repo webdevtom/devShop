@@ -188,20 +188,8 @@ function getAllLevelItems(): { [id: string]: StoreItem[]; } {
 */
 
 
-interface PersonType {
-  skill: string;
-  price: number;
-  icon: string;
-  title: string;
-}
 
-function getAllPeopleTypes() : { [id:string]: PersonType; } {
-  return { 
-      "dev": { skill: "dev", price: 150, icon:"💻", title: "dev"},
-      "test": {skill: "test", price: 200, icon:"🔬", title: "tester"},
-      "ba": {skill: "ba", price:250, icon:"🗣", title: "business analyst"}
-    };
-}
+
 class Game {
   constructor(startingMoney: number) {
     this.Money = startingMoney;
