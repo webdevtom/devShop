@@ -6,17 +6,16 @@ import { PersonType } from './staff/person-type';
 })
 export class StaffService {
 
-  types: PersonType[];
+  types: PersonType[] = [
+    { skill: "owner", price: 150, title: "Owner" },
+    { skill: "dev", price: 150, title: "Developer" },
+    { skill: "test", price: 200, title: "Tester" },
+    { skill: "qa", price: 200, title: "QA Engineer" },
+    { skill: "ba", price: 250, title: "Product Analyst" },
+    { skill: "pm", price: 350, title: "Project Manager" }
+  ]
   
   constructor() { 
-    this.types = [
-      { skill: "owner", price: 150, title: "owner" },
-      { skill: "dev", price: 150, title: "Developer" },
-      { skill: "test", price: 200, title: "Tester" },
-      { skill: "test", price: 200, title: "QA Engineer" },
-      { skill: "ba", price:250, title: "Product Analyst" },
-      { skill: "pm", price:250, title: "Project Manager" }
-    ];
   }
 
   requestType(skill: string) : PersonType { 
